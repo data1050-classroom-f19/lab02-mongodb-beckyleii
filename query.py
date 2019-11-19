@@ -122,8 +122,10 @@ def query4():
                                           {'$abs': {'$subtract': ['$pickup_latitude', '$dropoff_latitude']}}]
                                           }
                                  },
+                'passenger_count':{'$sum': '$passenger_count'}
             }
         },
+        
          {
             '$sort': {"average_price": -1}
         }]
